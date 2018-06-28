@@ -114,3 +114,28 @@ while i < 12 and j < 11:
     elif i == 11:
         i = 1
         j += 1
+
+print("")
+print("----------------------")
+print("-----   BONUS   ------")
+print("----------------------")
+print("")
+counter = 2
+numofNums = 0
+sum = 1
+while numofNums != 100:
+    print(sum)
+    sum = sum + counter
+    counter += 1
+    numofNums += 1
+
+print("")
+print("----------------------")
+print("-----EXTRA BONUS------")
+print("----------------------")
+print("")
+def giveMeFactors(x):
+    for i in range(1, x + 1):
+        if x % i == 0:
+            print(i)
+giveMeFactors(320)
