@@ -1,4 +1,3 @@
-
 print("----------------------")
 print("-----Challenge 1------")
 print("----------------------")
@@ -102,12 +101,34 @@ print("----------------------")
 print("-----Challenge 9------")
 print("----------------------")
 print("")
+x = [1,2,3]
+y = [4,5,6]
+r = []
+counter = 0
+while len(r) != len(y):
+    r.append(x[counter] * y[counter])
+    counter += 1
+print(r)
 
 print("")
 print("----------------------")
 print("-----Challenge 10-----")
 print("----------------------")
 print("")
+x = [[1,5,4],[2,3,6],[4,8,9]]
+y = [[2,9,3],[4,8,1],[5,7,6]]
+r = []
+for i in range(len(x)):
+    n = []
+    for j in range(len(x)):
+        z = 0
+        for k in range(len(x)):
+            xx = x[k]
+            yy = y[j]
+            z += xx[j] * yy[k]
+        n.append(z)
+    r.append(n)
+print(r)
 
 print("")
 print("----------------------")
@@ -115,17 +136,8 @@ print("-----Challenge 11-----")
 print("----------------------")
 print("")
 deDup = [1, 2, 5, 2, 3, 1, 6, 6]
-i = len(deDup)
-j = 0
 noDup = []
-while j < len(deDup):
-    if deDup[i] == deDup[j]:
-        deDup.pop()
-        j += 1
-    elif deDup[i] != deDup[j]:
-        j += 1
-    elif j == len(deDup):
-        j = len(deDup)
-        i -= 1
-print(deDup)
-    
+for number in deDup:
+    if number not in noDup:
+        noDup.append(number)
+print(noDup)
