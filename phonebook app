@@ -1,0 +1,46 @@
+print("")
+print("----------------------")
+print("----PHONE BOOK APP----")
+print("----------------------")
+phonebook = {}
+
+def phonebookApp():
+    print("")
+    print("1. Look up an entry 2. Set an entry 3. Delete an entry 4. List all entries 5. Quit")
+    answer = str(input("What would you like to do? "))
+    while True:
+        if answer == "1":
+            find = input("Name: ")
+            entryFound = phonebook[find]
+            print("Entry for " + find + ": " + entryFound + ".")
+            print("")
+            print("1. Look up an entry 2. Set an entry 3. Delete an entry 4. List all entries 5. Quit")
+            answer = str(input("What would you like to do? "))
+
+        elif answer == "2":
+            print("Enter name and number.")
+            entryName = str(input("Name: "))
+            entryNum = str(input("Number: "))
+            phonebook[entryName] = entryNum
+            print("Entry stored for " + entryName + ".")
+            print("")
+            print("1. Look up an entry 2. Set an entry 3. Delete an entry 4. List all entries 5. Quit")
+            answer = str(input("What would you like to do? "))
+
+        elif answer == "3":
+            delName = input("Name: ")
+            del phonebook[delName]
+            print("Deleted entry for " + delName + ".")
+            print("")
+            print("1. Look up an entry 2. Set an entry 3. Delete an entry 4. List all entries 5. Quit")
+            answer = str(input("What would you like to do? "))
+        elif answer == "4":
+            print(phonebook)
+            print("")
+            print("1. Look up an entry 2. Set an entry 3. Delete an entry 4. List all entries 5. Quit")
+            answer = str(input("What would you like to do? "))
+        elif answer == "5":
+            print("Bye!")
+            break
+
+phonebookApp()
